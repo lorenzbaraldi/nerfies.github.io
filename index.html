@@ -2,14 +2,11 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
-  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Diffusion-generated Deepfake Detection dataset (D3)</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <!--<script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
 
@@ -21,13 +18,9 @@
 
     gtag('config', 'G-PYVRSFMDRL');
   </script>
-
+-->
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
-  <!--SLIDES ADD-->
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-  <!--SLIDES END-->
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
@@ -133,13 +126,12 @@
     </div>
   </div>
 </section>
-
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <!--<img src="./static/images/huggingface_d3_gif.gif">-->
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">D<sup>3</sup></span> contains 9.2M generated images, generated with 4 SOTA diffusion model generators 
+        <span class="dnerf">D<sup>3</sup></span> contains 9.2M generated images, generated with 4 SOTA diffusion model generators.
       </h2>
     </div>
   </div>
@@ -207,112 +199,11 @@
       </div>
     </div>
     <!--/ Abstract. -->
-
-    <!-- Paper video. -->
-    <!--<div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-  -->
-    <!--/ Paper video. -->
   </div>
 </section>
 
 
-<section class="section">
-  <div class="container is-max-desktop">
 
-    <div class="columns is-centered">
-
-      <!-- Visual Effects. -->
-      <!--
-      <div class="column">
-      
-        <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
-          <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
-          </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-      -->
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <!--
-      <div class="column">
-        <h2 class="title is-3">Matting</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
-        </div>
-      </div>
-    </div>
-    -->
-    <!--/ Matting. -->
-
-    <!-- Animation. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
-
-        <!-- Interpolating. -->
-        
-        <h3 class="title is-4">Interpolating states</h3>
-        <div class="content has-text-justified">
-          <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
-          </p>
-        </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
-          </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
-          </div>
-        </div>
-        <br/>
-        
-        <!--/ Interpolating. -->
-
-      </div>
-    </div>
     <!--/ Animation. -->
     <!--<div class="columns is-centered">
       <div class="column is-full-width">
@@ -354,12 +245,38 @@
     </div>
   -->
     <!--/ Concurrent Work. -->
+  <section class="hero is-light is-small">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-centered has-text-centered">
+        <img src="./static/images/output.gif" height="60%">
+        </div>
+      </div>
+    </div>
+  </section>
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">A Deepfake detection benchmark</h2>
+        <div class="content has-text-justified">
+          <p>
+            This work has been done under the Multimedia use case of the European project <a href="https://www.elsa-ai.eu/">ELSA</a>
+            The objective of the Multimedia use case is to develop effective solutions for detecting and mitigating the spread of deep fake images in multimedia content.
+             Deep fake images, which are highly realistic and deceptive manipulations, pose significant risks to privacy, security, and trust in digital media. 
+             By leveraging advanced techniques in computer vision and machine learning, participants in this competition aim to create robust and accurate models that can identify and flag instances of deep fake images. 
+
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
   </div>
 </section>
 
-
-<section class="section" id="BibTeX">
+<!--<section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">Acknowledgment</h2>
     <pre><code>@article{park2021nerfies,
@@ -370,17 +287,20 @@
 }</code></pre>
   </div>
 </section>
-
+-->
 
 <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
       <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
-        <i class="fas fa-file-pdf"></i>
+         href="https://international.unimore.it/">
+        <img width=100vw src="./static/images/Logo_A_Positivo_Colore.png">
       </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
-        <i class="fab fa-github"></i>
+      <a class="icon-link" href="https://www.leonardo.com/it/innovation-technology/leonardo-labs" class="external-link" disabled>
+        <img width=100vw src="./static/images/Logo_Leonardo.png">
+      </a>
+      <a class="icon-link" href="https://www.elsa-ai.eu/" class="external-link" disabled>
+        <img width=100vw src="./static/images/elsa_logo.png">
       </a>
     </div>
     <div class="columns is-centered">
